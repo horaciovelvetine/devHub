@@ -9,7 +9,7 @@ module Quebert
       case command
       when nil # GET current cronfig since they are nil on a get request
         { message: readable_cronfig(current_cronfig),
-          payload: { days:, hours:, minutes:, seconds:, runImmediately: run_on_start } }
+          payload: { days: days, hours: hours, minutes: minutes, seconds: seconds, runImmediately: run_on_start } }
       when 'config'
         binding.pry
       else
